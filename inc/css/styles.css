@@ -1,0 +1,136 @@
+body
+{
+	font: 65% "Trebuchet MS", sans-serif;
+	margin: 0;
+	background:url('back.gif');
+}
+
+canvas
+{
+	border: 1px solid #000;
+	z-index: 1;
+	
+}
+
+#objects
+{
+	position: absolute;
+	z-index: 2;
+}
+.object
+{
+	position: absolute;
+	width: 220px;
+}
+.object p {
+	padding: 7px;
+}
+
+.object label
+{
+	float: right;
+	border: 1px solid #ccc;
+	margin-right: 3px;
+	cursor: pointer;
+}
+
+.ui-multidraggable
+{
+	border: 2px dashed #000;
+}
+.ui-icon-arrowthick-2-n-s
+{
+	cursor: move;
+}
+textarea
+{
+	line-height: 2em;
+}
+
+#menu
+{
+	position: fixed;
+	z-index: 5;
+	top: 5px;
+	left: 5px;
+	padding: 5px;
+}
+
+#dialogbody label
+{
+	display: inline-block;
+	width: 120px;
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+}
+#dialogbody input, #dialogbody textarea, #dialogbody  select
+{
+	background: #fff;
+	width: 400px;
+	border: 1px solid #666;
+	padding: 5px;
+	font: 1.2em/120% Tahoma, Arial, sans-serif; color: navy;
+}
+#dialogbody iframe, #dialogbody2
+{
+	width: 100%;
+	height: 490px;
+	border: 0;
+}
+
+.Tree p
+{
+	background: #FC9856;
+}
+.Graph p {
+	background: #56BAFC;
+}
+
+ul
+{
+	list-style-type: none; margin: 0; padding: 0; margin: 0; width: 100%;
+}
+ul li
+{
+	margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px;
+}
+ul li span
+{
+	position: absolute; margin-left: -1.3em;
+}
+
+
+#menu_newwin
+{
+	display: none;
+}
+
+#radar
+{
+	position: fixed;
+	top: 60px;
+	left: 10px;
+	width: 500px;
+	height: 500px;
+	z-index: 101;
+	background: #eee;
+	border: 1px solid #ccc;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+	display: none;
+}
+#radarview, #radarboxes
+{
+	position: absolute;
+}
+#radarview
+{
+	border: 2px solid #e33;
+	cursor: move;
+}
+#radar .radarobject
+{
+	position: absolute;
+	border: 1px solid #000;
+	cursor: help;
+}

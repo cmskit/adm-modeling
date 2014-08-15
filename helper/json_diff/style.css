@@ -1,0 +1,72 @@
+body {
+    font-family: "Verdana", sans-serif;
+}
+
+h1 {
+    margin: 30px;
+}
+
+.jsontext {
+    text-align: center;
+    clear: both;
+}
+
+.jsontext > div {
+    float: left;
+    width: 50%;
+}
+
+.jsontext textarea {
+    width: 95%;
+    height: 200px;
+}
+
+.buttons {
+    text-align: center;
+    background: #fff;
+}
+
+.buttons input, button {
+    margin: 15px 1px 0 1px;
+    padding: 5px 10px;
+}
+
+.json-error {
+    background: #ffdfdf;
+    -webkit-transition: all 1s;
+}
+
+.jsonerrormessage {
+    font-weight: bold;
+    color: red;
+    font-size: smaller;
+}
+
+h2 {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.header-options {
+    margin-left: 30px;
+    display: inline-block;
+}
+
+#jsondiff {
+    width: 95%;
+    height: 200px;
+}
+
+
+/**/
+.lbl{
+float:left;
+width:400px;
+}
+.clear{
+clear:both;
+}
+
+#for_json1, #for_json2 {
+	font-weight: bold;
+}
