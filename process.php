@@ -12,8 +12,7 @@
 *
 *  The GNU General Public License can be found at
 *  http://www.gnu.org/licenses/gpl.html
-*  A copy is found in the textfile GPL.txt and important notices to other licenses
-*  can be found found in LICENSES.txt distributed with these scripts.
+
 *
 *  This script is distributed in the hope that it will be useful,
 *  but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -54,7 +53,7 @@ foreach(	array(
 					'inc/process_includes.php',// load Helper-Functions
 					'inc/objecttemplate.php',// load Template-Class
 					
-					'../../../vendor/cmskit/lib-pclzip/pclzip.lib.php',// load ZIP-Library
+					'../../../vendor/pclzip/pclzip/pclzip.lib.php',// load ZIP-Library
 					'../../inc/php/functions.php',// get Version-No
 					
 					$projectPath . '__model.php',// load old Model => (object)$objects
@@ -423,7 +422,7 @@ $_SESSION[$projectName]['objects'] = json_decode($jsonstr1, true);
 	<title>cms-kit-process</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
-	<link href="../../../vendor/cmskit/lib-jquery-ui/themes/<?php echo end($_SESSION[$projectName]['config']['theme'])?>/jquery-ui.css" rel="stylesheet" />
+	<link href="../../../vendor/cmskit/jquery-ui/themes/<?php echo end($_SESSION[$projectName]['config']['theme'])?>/jquery-ui.css" rel="stylesheet" />
 	<link href="../../inc/css/<?php echo end($_SESSION[$projectName]['config']['theme'])?>/style.css" rel="stylesheet" />
 <style>
 body {

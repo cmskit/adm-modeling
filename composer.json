@@ -1,8 +1,8 @@
 {
-    "name": "cmskit/admin-modeling-wizard",
+    "name": "cmskit/admin-database-modeling",
     "type": "library",
     "version": "0.0.0",
-    "description": "A short description in english",
+    "description": "A Entity Relation Modeler to build database tables, configurations for backend appearance and ORM classes",
     "license": "GPL",
     "authors": [
         {
@@ -14,7 +14,9 @@
 
     "require": {
         "php": ">=5.3.3",
-        "cmskit/lib-jquery-ui": "dev-master",
-        "cmskit/lib-ace-editor": "*"
+        "cmskit/package-installer": "1.0.*@dev",
+        "cmskit/jquery-ui": "dev-master",
+        "cmskit/ace-editor": "dev-master",
+        "pclzip/pclzip": "dev-master"
     }
 }

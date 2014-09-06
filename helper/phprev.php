@@ -12,8 +12,7 @@
 *
 *  The GNU General Public License can be found at
 *  http://www.gnu.org/licenses/gpl.html
-*  A copy is found in the textfile GPL.txt and important notices to other licenses
-*  can be found found in LICENSES.txt distributed with these scripts.
+
 *
 *  This script is distributed in the hope that it will be useful,
 *  but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -29,7 +28,7 @@ $fileName = (($_GET['file']=='__model') ? '__model.php' : 'class.'.$_GET['file']
 $projectPath = '../../../../projects/' . $projectName . '/objects/'.$fileName;
 
 if(!$_SESSION[$projectName]['root']) exit('no Rights to edit!');
-if(!file_exists('../../../../vendor/cmskit/lib-ace-editor/src-min/ace.js')) exit('Syntax-Wizard is missing :-(');
+if(!file_exists('../../../../vendor/cmskit/ace-editor/src-min/ace.js')) exit('Syntax-Wizard is missing :-(');
 if(!file_exists($projectPath)) exit('File is missing ?:-(');
 
 
@@ -53,7 +52,7 @@ $content = file_get_contents($projectPath);
 	
 	<link href="../../../wizards/markup/inc/styles.css" rel="stylesheet" />
 	<script src="../../../wizards/markup/inc/scripts.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../../../../vendor/cmskit/lib-ace-editor/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../../vendor/cmskit/ace-editor/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
 	<style>
 		body, #helpdesk{ font-size:14px;background-color:#fff;color:#000;border:1px solid #000;}
 	</style>

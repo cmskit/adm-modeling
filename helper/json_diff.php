@@ -88,7 +88,7 @@ require $projectPath . '__model.php';
 
 
 // get the old Version
-require '../../../../vendor/cmskit/lib-pclzip/pclzip.lib.php';
+require '../../../../vendor/pclzip/pclzip/pclzip.lib.php';
 $zip = $projectPath . 'backup/' . $_GET['zip'];
 if(!file_exists($zip)) exit('Backup dosen\'t exist');
 
@@ -110,11 +110,11 @@ if($list != 0)
 		<title>Data-Diff</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<link href="../../../../vendor/cmskit/lib-jquery-ui/themes/'.end($_SESSION[$projectName]['config']['theme']).'/jquery-ui.css" rel="stylesheet" />
+		<link href="../../../../vendor/cmskit/jquery-ui/themes/'.end($_SESSION[$projectName]['config']['theme']).'/jquery-ui.css" rel="stylesheet" />
 		<link type="text/css" rel="stylesheet" href="json_diff/style.css" media="screen" />
 		<link type="text/css" rel="stylesheet" href="json_diff/jsondiffpatch.html.css" media="screen" />
 		
-		<script type="text/javascript" src="../../../../vendor/cmskit/lib-jquery-ui/jquery.min.js"></script>
+		<script type="text/javascript" src="../../../../vendor/cmskit/jquery-ui/jquery.min.js"></script>
 		<script type="text/javascript" src="json_diff/jsondiffpatch.js"></script>
 		<script type="text/javascript" src="json_diff/jsondiffpatch.html.js"></script>
 		<script type="text/javascript" src="json_diff/diff_match_patch_uncompressed.js"></script>

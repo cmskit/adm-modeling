@@ -1,6 +1,6 @@
 # cms-kit admin wizard "database modeling"
 
-Installation path: backend/admin/modeling
+Installation path: backend/admin/database_modeling
 
 ## Description
 
@@ -16,7 +16,7 @@ database-tables whitch can be used by your frontend projects as well.
 
 ### manual Installation
 
-1. download and extract this Folder (package_manager) into backend/admin/
+1. download and extract this Folder into backend/admin/
 
 ### Installation via package management
 

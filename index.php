@@ -12,8 +12,7 @@
 *
 *  The GNU General Public License can be found at
 *  http://www.gnu.org/licenses/gpl.html
-*  A copy is found in the textfile GPL.txt and important notices to other licenses
-*  can be found found in LICENSES.txt distributed with these scripts.
+
 *
 *  This script is distributed in the hope that it will be useful,
 *  but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -37,13 +36,13 @@ $conf = $projectName.'\\Configuration';
 
 <title>cms-kit database modeling</title>
 
-<link href="../../../vendor/cmskit/lib-jquery-ui/themes/<?php echo end($_SESSION[$projectName]['settings']['interface']['theme'])?>/jquery-ui.css" rel="stylesheet" />
+<link href="../../../vendor/cmskit/jquery-ui/themes/<?php echo end($_SESSION[$projectName]['settings']['interface']['theme'])?>/jquery-ui.css" rel="stylesheet" />
 
 <!--<link href="inc/css/chosen.css" rel="stylesheet" />-->
-<script src="../../../vendor/cmskit/lib-jquery-ui/jquery.min.js"></script>
+<script src="../../../vendor/cmskit/jquery-ui/jquery.min.js"></script>
 
 <script>$.uiBackCompat = false;</script>
-<script src="../../../vendor/cmskit/lib-jquery-ui/jquery-ui.js"></script>
+<script src="../../../vendor/cmskit/jquery-ui/jquery-ui.min.js"></script>
 <script src="../../inc/js/rules/disallowedNames.js"></script>
 
 <!--
@@ -52,15 +51,15 @@ $conf = $projectName.'\\Configuration';
 <script>
 if (!window.JSON)
 {
-	document.writeln('<script src="../../../vendor/cmskit/lib-jquery-ui/plugins/json3.min.js"><\/script>')
+	document.writeln('<script src="../../../vendor/cmskit/jquery-ui/plugins/json3.min.js"><\/script>')
 }
 </script>
 
-<link type="text/css" href="../../../vendor/cmskit/lib-jquery-ui/plugins/css/jquery.uix.multiselect.css" rel="stylesheet" />
+<link type="text/css" href="../../../vendor/cmskit/jquery-ui/plugins/css/jquery.uix.multiselect.css" rel="stylesheet" />
 <link type="text/css" href="inc/css/styles.css" rel="stylesheet" />
 
-<script type="text/javascript" src="../../../vendor/cmskit/lib-jquery-ui/plugins/jquery.uix.multiselect.min.js"></script>
-<script src="../../../vendor/cmskit/lib-jquery-ui/plugins/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../../../vendor/cmskit/jquery-ui/plugins/jquery.uix.multiselect.min.js"></script>
+<script src="../../../vendor/cmskit/jquery-ui/plugins/jquery.tmpl.js"></script>
 
 
 <?php include 'inc/ui-templates.php'; ?>
@@ -86,7 +85,7 @@ if (!window.JSON)
 	<button title="<?php echo L('save_or_export_new_Model')?>" id="menu_export" data-icon="gear" type="button">
 		<?php echo L('Export')?>
 	</button>
-	<button title="<?php echo L('toggle_Radar')?>" id="menu_radar" data-icon="lightbulb" type="button">
+	<button title="<?php echo L('toggle_Radar')?>" id="menu_radar" data-icon="zoomout" type="button">
 	&nbsp;
 	</button>
 	<button title="<?php echo L('open_Documentation')?>" id="menu_help" data-icon="help" type="button">
