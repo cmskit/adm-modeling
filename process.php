@@ -128,7 +128,7 @@ foreach ($draftModel['object'] as $object)
 		// get Object-Name
 		$name = strtolower($object['name']);
 		
-		// abort if invalid Object-Name!
+		// abort if invalid objectname!
 		if(!preg_match("#^[\w]+$#", $name))
 		{ 
 			exit('Object-Name: "'.$name.'" is not valid!');
@@ -142,7 +142,7 @@ foreach ($draftModel['object'] as $object)
 						array('hooks',		false, true, ''),
 						array('url',		false, false, ''),
 						array('vurl',		false, false, ''),
-						array('view',	true,  false, null),
+						array('view',	    true,  false, null),
 						array('templates',	true,  false, ''),
 						array('ttype',		true,  false, 'List'),
 						array('hidettype',	true,  false, ''),
@@ -176,6 +176,8 @@ foreach ($draftModel['object'] as $object)
 		// test Hierarchy
 		checkHierarchy ($queries, $name, $tmp['db'], $tmp['inc'], $tmp['ttype'], $tmp);
 
+
+        // if a view-statement is detected
         if(!empty($tmp['view'])) {
             // clear the array with table query-statements
             $queries[$tmp['db']][$name] = array();
@@ -198,16 +200,15 @@ foreach ($draftModel['object'] as $object)
                         .$dbViews[$tmp['db']][$name]
                         .'</pre>';
                 }
-                // drop the old view
+                // don't create a normal table so drop the old view
                 $queries[$tmp['db']][$name][] = 'DROP VIEW IF EXISTS `'.$name.'`;';
                 // create the view
                 $queries[$tmp['db']][$name][] = $createViewStm.$tmp['view'].';';
             }
 
 
-           //print_r($queries[$tmp['db']][$name]);
-           //unset($queries[$tmp['db']][$name]);
-        }
+
+        } // if view END
 		
 		// assign temporary Object to the new Model
 		$newModel[$name] = $tmp;
