@@ -37,17 +37,16 @@ $conf = $projectName.'\\Configuration';
 <title>cms-kit database modeling</title>
 
 <link href="../../../vendor/cmskit/jquery-ui/themes/<?php echo end($_SESSION[$projectName]['settings']['interface']['theme'])?>/jquery-ui.css" rel="stylesheet" />
+<link type="text/css" href="../../../vendor/cmskit/jquery-ui/plugins/css/jquery.uix.multiselect.css" rel="stylesheet" />
+<link type="text/css" href="inc/css/styles.css" rel="stylesheet" />
 
-<!--<link href="inc/css/chosen.css" rel="stylesheet" />-->
-<script src="../../../vendor/cmskit/jquery-ui/jquery.min.js"></script>
+<script type="text/javascript" src="../../../vendor/cmskit/jquery-ui/jquery.min.js"></script>
 
 <script>$.uiBackCompat = false;</script>
-<script src="../../../vendor/cmskit/jquery-ui/jquery-ui.min.js"></script>
-<script src="../../inc/js/rules/disallowedNames.js"></script>
+<script type="text/javascript" src="../../../vendor/cmskit/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="inc/js/disallowedNames.js"></script>
 
-<!--
-<script src="inc/js/jsquery.ui.multidraggable.js"></script>
--->
+
 <script>
 if (!window.JSON)
 {
@@ -55,11 +54,10 @@ if (!window.JSON)
 }
 </script>
 
-<link type="text/css" href="../../../vendor/cmskit/jquery-ui/plugins/css/jquery.uix.multiselect.css" rel="stylesheet" />
-<link type="text/css" href="inc/css/styles.css" rel="stylesheet" />
+
 
 <script type="text/javascript" src="../../../vendor/cmskit/jquery-ui/plugins/jquery.uix.multiselect.min.js"></script>
-<script src="../../../vendor/cmskit/jquery-ui/plugins/jquery.tmpl.js"></script>
+<script type="text/javascript" src="../../../vendor/cmskit/jquery-ui/plugins/jquery.tmpl.js"></script>
 
 
 <?php include 'inc/ui-templates.php'; ?>
@@ -135,7 +133,7 @@ echo  '
 ';
 
 $ddefaultLabel = array();
-$datatypes = json_decode(file_get_contents('../../inc/js/rules/datatypes.json'), true);
+$datatypes = json_decode(file_get_contents('inc/datatypes.json'), true);
 
 foreach($datatypes as $k => $v)
 {

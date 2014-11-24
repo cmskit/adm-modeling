@@ -1,0 +1,156 @@
+{
+	"INTEGER": {
+		"type": "NUMERIC",
+		"tpl": "number",
+		"quote": "0",
+		"filter": "FILTER_SANITIZE_NUMBER_INT",
+		"php": "int",
+		"default": {
+			"Zero": 0
+		},
+		"mysql": "INT",
+		"max": "11",
+		"sqlite": "INTEGER"
+	},
+
+	"FLOAT": {
+		"type": "NUMERIC",
+		"tpl": "number",
+		"quote": "0",
+		"filter": "FILTER_SANITIZE_NUMBER_FLOAT",
+		"php": "float",
+		"default": {
+			"Zero": 0
+		},
+		"mysql": "FLOAT",
+		"sqlite": "REAL"
+	},
+	
+	"BOOL": {
+		"type": "NUMERIC",
+		"tpl": "bool",
+		"quote": "0",
+		"filter": "FILTER_VALIDATE_BOOLEAN",
+		"php": "int",
+		"default": {
+			"False": 0,
+			"True": 1
+		},
+		"mysql": "INT (1)",
+		"max": "1",
+		"sqlite": "INTEGER"
+	},
+	
+	"VARCHAR": {
+		"type": "CHARACTER",
+		"tpl": "string",
+		"quote": "1",
+		"filter": "",
+		"php": "string",
+		"default": {
+			"Empty": " "
+		},
+		"mysql": "VARCHAR (255)",
+		"max": "255",
+		"sqlite": "TEXT"
+	},
+	
+	"TEXT": {
+		"type": "CHARACTER",
+		"tpl": "text",
+		"quote": "1",
+		"filter": "",
+		"php": "string",
+		"default": {
+			"Empty": " "
+		},
+		"mysql": "MEDIUMTEXT",
+		"sqlite": "TEXT"
+	},
+	
+	"BLOB": {
+		"type": "CHARACTER",
+		"tpl": "text",
+		"quote": "1",
+		"filter": "",
+		"php": "string",
+		"default": {
+			"Empty": " "
+		},
+		"mysql": "BLOB",
+		"sqlite": "BLOB"
+	},
+
+	"DATE": {
+		"type": "OTHER",
+		"tpl": "string",
+		"quote": "1",
+		"filter": "",
+		"php": "string",
+		"default": {
+			"Empty": " ",
+			"Zero": 0,
+			"actual_Date": "function:date(\"Y-m-d\")"
+		},
+		"mysql": "DATE",
+		"sqlite": "TEXT"
+	},
+
+	"DATETIME": {
+		"type": "OTHER",
+		"tpl": "string",
+		"quote": "1",
+		"filter": "",
+		"php": "string",
+		"default": {
+			"Empty": " ",
+			"Zero": 0,
+			"actual_Datetime": "function:date(\"Y-m-d H:i:s\")"
+		},
+		"mysql": "DATETIME",
+		"sqlite": "TEXT"
+	},
+	
+	"YEAR": {
+		"type": "OTHER",
+		"tpl": "number",
+		"quote": "0",
+		"filter": "",
+		"php": "int",
+		"default": {
+			"Empty": " ",
+			"Zero": 0,
+			"actual_Year": "function:date(\"Y\")"
+		},
+		"mysql": "YEAR",
+		"sqlite": "TEXT"
+	},
+
+	"TIMESTAMP": {
+		"type": "OTHER",
+		"tpl": "number",
+		"quote": "0",
+		"filter": "",
+		"php": "int",
+		"default": {
+			"Zero": 0,
+			"actual_Timestamp": "function:time()"
+		},
+		"mysql": "INT",
+		"max": "11",
+		"sqlite": "INTEGER"
+	},
+
+	"MODEL": {
+		"type": "OTHER",
+		"tpl": "none",
+		"quote": "1",
+		"filter": "",
+		"php": "string",
+		"default": {
+			"Template selector": "function:file_get_contents(__DIR__.\"/generic/select_X.json\")"
+		},
+		"mysql": "MEDIUMTEXT",
+		"sqlite": "TEXT"
+	}
+}
