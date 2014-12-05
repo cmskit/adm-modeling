@@ -1,7 +1,7 @@
 {
     "name": "cmskit/admin-database-modeling",
     "type": "library",
-    "version": "0.0.0",
+    "version": "0.8.0",
     "description": "A Entity Relation Modeler to build database tables, configurations for backend appearance and ORM classes",
     "license": "GPL",
     "authors": [
