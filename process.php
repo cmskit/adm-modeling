@@ -77,7 +77,7 @@ if(!is_writable($projectPath)) exit('Folder "objects" is not writable!');
 
 
 // OBJECTS
-$datatypes 		= json_decode(file_get_contents('../../inc/js/rules/datatypes.json'), true);// load Datatypes
+$datatypes 		= json_decode(file_get_contents('inc/datatypes.json'), true);// load Datatypes
 
 $dbModel 		= getTableStructure(); //
 $dbViews 		= getViewDefinitions(); //
