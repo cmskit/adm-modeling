@@ -844,8 +844,11 @@ function buildFollowers(v, my_type)
 	{
 		html += '<select id="wizardEmbedSelect"><option value=""><?php echo L('Wizard')?></option>';
 		for (e in w) {
-            var l = w[e]['embed'].split('\\n').shift();
-            html += '<option title="'+w[e]['description']+'" value="'+w[e]['embed']+'">'+l+'</option>';
+            if(w[e]['embed']) {
+                var l = w[e]['embed'].split('\\n').shift();
+                html += '<option title="'+w[e]['description']+'" value="'+w[e]['embed']+'">'+l+'</option>';
+            }
+
         }
 		html += '</select>';
 	}
