@@ -17,6 +17,7 @@
         "cmskit/package-installer": "1.0.*@dev",
         "cmskit/jquery-ui": "dev-master",
         "cmskit/ace-editor": "dev-master",
-        "pclzip/pclzip": "dev-master"
+        "pclzip/pclzip": "dev-master",
+        "cmskit/admin-database-adminer": "dev-master"
     }
 }
