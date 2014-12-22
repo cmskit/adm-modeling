@@ -295,7 +295,7 @@ $(function()
 						var q0 = confirm('<?php echo L('first_open_Database_Management_to_create_a_full_Backup')?>?');
 						if (q0)
 						{
-							window.open('../db_admin/index.php?project=<?php echo $projectName?>', 'DB-Admin');
+							window.open('../database_adminer/index.php?project=<?php echo $projectName?>', 'DB-Admin');
 						}
 						else
 						{
@@ -344,7 +344,7 @@ $(function()
 	});
 	
 	$('#menu_help').on('click', function(){
-		$('#dialogbody').html('<iframe src="../package_manager/showDoc.php?file=../modeling/doc/<?php echo $lang?>/.object_modeling.md"></iframe>');
+		$('#dialogbody').html('<iframe src="../package_manager/showDoc.php?file=../database_modeling/doc/<?php echo $lang?>/.object_modeling.md"></iframe>');
 		$('#dialog_SaveButton').hide();
 		$('#dialog').dialog('open');
 	});
