@@ -77,19 +77,19 @@ if (!window.JSON)
 </div>
 
 <div id="menu" class="ui-widget-header ui-corner-all">
-	<button title="<?php echo L('create_new_Object')?>" id="menu_new_object" data-icon="circle-plus" type="button">
+	<button title="<?php echo L('create_new_object')?>" id="menu_new_object" data-icon="circle-plus" type="button">
 		<?php echo L('new_Object')?>
 	</button>
-	<button title="<?php echo L('save_or_export_new_Model')?>" id="menu_export" data-icon="gear" type="button">
+	<button title="<?php echo L('save_or_export_new_model')?>" id="menu_export" data-icon="gear" type="button">
 		<?php echo L('Export')?>
 	</button>
-	<button title="<?php echo L('toggle_Radar')?>" id="menu_radar" data-icon="zoomout" type="button">
+	<button title="<?php echo L('toggle_radar')?>" id="menu_radar" data-icon="zoomout" type="button">
 	&nbsp;
 	</button>
-	<button title="<?php echo L('open_Documentation')?>" id="menu_help" data-icon="help" type="button">
+	<button title="<?php echo L('open_documentation')?>" id="menu_help" data-icon="help" type="button">
 		<?php echo L('Help')?>
 	</button>
-	<button title="<?php echo L('open_new_Window')?>" id="menu_newwin" data-icon="newwin" type="button">
+	<button title="<?php echo L('open_in_new_window')?>" id="menu_newwin" data-icon="newwin" type="button">
 	&nbsp;
 	</button>
 </div>
@@ -359,7 +359,10 @@ $(function()
 	
 	// Button-Styling
 	$('#menu button').each(function() {
-		$(this).button( {icons:{ primary: 'ui-icon-'+$(this).data('icon')}, text: (($(this).text()=='.')?false:true)})
+		$(this).button( {
+			icons:{ primary: 'ui-icon-'+$(this).data('icon')},
+			text: ($(this).text()!='&nbsp;')
+		})
 	});
 	
 	// Menu END
